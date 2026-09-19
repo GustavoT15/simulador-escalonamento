@@ -28,8 +28,6 @@ executa os seis algoritmos simultaneamente sobre o mesmo conjunto de tarefas.
 
 ## Como executar
 
-> ⚠️ Preencher conforme a forma final de entrega do projeto:
-
 - Cique duas vezes em
   `<NomeDoExecutavel>.exe` ou
 - Instale o [Godot Engine](https://godotengine.org/)
@@ -103,8 +101,8 @@ simulador_escalonamento/
 
 ## Requisitos de ambiente
 
-- **Godot Engine 4.4 ou superior** (confirmar a versão exata em `project.godot`), caso a entrega seja o projeto-fonte.
-- Nenhuma biblioteca ou addon de terceiros é utilizado — apenas classes nativas do motor.
+- **Godot Engine 4.4 ou superior** caso seja utilizado o código-fonte.
+- Apenas classes nativas do motor.
 - Sistema operacional: <preencher, conforme a(s) plataforma(s) de exportação usada(s)>.
 
 ## Funcionalidades
