@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://0ons1hbuxowf"]
+
+[ext_resource type="Script" uid="uid://kp8q10vco5ga" path="res://elements/scripts/elemento_grafico_tupla_script.gd" id="1_3kidn"]
+[ext_resource type="PackedScene" uid="uid://dribrqdbjfmvt" path="res://elements/grafico/step_tarefa_ativa.tscn" id="2_a8av0"]
+[ext_resource type="PackedScene" uid="uid://cftk5a8e3cvg0" path="res://elements/grafico/step_tarefa.tscn" id="3_lavrb"]
+[ext_resource type="PackedScene" uid="uid://b4m65qjhnkrg3" path="res://elements/grafico/step_vazio.tscn" id="4_8fmhp"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=1724675353]
+script = ExtResource("1_3kidn")
+tempo = null
+elemento_tarefa_ativa = ExtResource("2_a8av0")
+elemento_tarefa = ExtResource("3_lavrb")
+elemento_vazio = ExtResource("4_8fmhp")
+ticks_ativo = null
+ticks_recurso = null

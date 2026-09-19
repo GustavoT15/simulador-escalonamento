@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://crrpthibrtsfb"]
+
+[ext_resource type="Script" uid="uid://b1n4qflj6u07i" path="res://elements/scripts/elemento_entrada_texto_script.gd" id="1_w603b"]
+
+[node name="EntradaDeTexto" type="VBoxContainer" unique_id=441406 node_paths=PackedStringArray("titulo", "entrada_de_texto")]
+script = ExtResource("1_w603b")
+titulo = NodePath("RichTextLabel")
+entrada_de_texto = NodePath("SpinBox")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2069605672]
+layout_mode = 2
+fit_content = true
+autowrap_mode = 0
+
+[node name="SpinBox" type="SpinBox" parent="." unique_id=559837436]
+layout_mode = 2

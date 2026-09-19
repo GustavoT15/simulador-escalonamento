@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://blg1t7iieijdm"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_t4qm6"]
+color = Color(1, 1, 1, 1)
+
+[node name="HSeparator" type="HSeparator" unique_id=1742873824]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_t4qm6")

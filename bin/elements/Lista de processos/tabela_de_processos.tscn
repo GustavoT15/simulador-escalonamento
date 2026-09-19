@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dipvg4biirhx2"]
+
+[ext_resource type="Script" uid="uid://sqaeyi7bwrbq" path="res://elements/Lista de processos/scripts/tabela_de_processos_script.gd" id="1_4ks2n"]
+[ext_resource type="PackedScene" uid="uid://b6oo1nt4mqdkt" path="res://elements/Lista de processos/Elemento_Tarefa_modulo.tscn" id="2_3dhci"]
+[ext_resource type="PackedScene" uid="uid://crrpthibrtsfb" path="res://elements/Elemento_Entrada_Texto.tscn" id="2_4ks2n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aharh"]
+bg_color = Color(0.047058824, 0.047058824, 0.047058824, 0.34509805)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh7en"]
+
+[node name="TabelaDeProcessos" type="PanelContainer" unique_id=642124861 node_paths=PackedStringArray("botao_salvar", "botao_remover_preset", "botao_adicionar", "botao_aleatorizar", "text_aleatorizar", "botao_limpar", "texto_entrada_nome_save", "dropdown_presets", "texto_entrada_rand_count", "texto_entrada_inicio", "texto_entrada_prioridade", "texto_entrada_tempo_processo", "texto_entrada_tempo_pedido_recurso", "texto_entrada_tempo_recurso", "container_tarefas")]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aharh")
+script = ExtResource("1_4ks2n")
+botao_salvar = NodePath("VBoxContainer/HBoxContainer2/Button")
+botao_remover_preset = NodePath("VBoxContainer/HBoxContainer2/Button2")
+botao_adicionar = NodePath("VBoxContainer/GridContainer/Adicionar")
+botao_aleatorizar = NodePath("VBoxContainer/HBoxContainer/PanelContainer/Aleatorizar")
+text_aleatorizar = NodePath("VBoxContainer/HBoxContainer/PanelContainer/Textoaleatorizar")
+botao_limpar = NodePath("VBoxContainer/Limpar")
+texto_entrada_nome_save = NodePath("VBoxContainer/HBoxContainer2/LineEdit")
+dropdown_presets = NodePath("VBoxContainer/HBoxContainer2/MenuButton")
+texto_entrada_rand_count = NodePath("VBoxContainer/HBoxContainer/EntradaDeTexto4")
+texto_entrada_inicio = NodePath("VBoxContainer/GridContainer/EntradaDeTexto")
+texto_entrada_prioridade = NodePath("VBoxContainer/GridContainer/EntradaDeTexto2")
+texto_entrada_tempo_processo = NodePath("VBoxContainer/GridContainer/EntradaDeTexto3")
+texto_entrada_tempo_pedido_recurso = NodePath("VBoxContainer/GridContainer/EntradaDeTexto4")
+texto_entrada_tempo_recurso = NodePath("VBoxContainer/GridContainer/EntradaDeTexto5")
+container_tarefas = NodePath("VBoxContainer/ScrollContainer/ContainerTarefas")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1615177408]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=478372154]
+layout_mode = 2
+text = "Lista de Processos
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=192601654]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2" unique_id=700804204]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Template_01"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1545233957]
+layout_mode = 2
+text = "Salvar"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1761420856]
+layout_mode = 2
+text = "Remover"
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer/HBoxContainer2" unique_id=1553285742]
+layout_mode = 2
+text = "Selecionar cfg"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2071818143]
+layout_mode = 2
+
+[node name="EntradaDeTexto4" parent="VBoxContainer/HBoxContainer" unique_id=441406 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+size_flags_horizontal = 3
+valor_inicial = 4.0
+nome_exibir = "Quantidade De Items"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer" unique_id=2145577985]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oh7en")
+
+[node name="Aleatorizar" type="Button" parent="VBoxContainer/HBoxContainer/PanelContainer" unique_id=1729430519]
+layout_mode = 2
+
+[node name="Textoaleatorizar" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/PanelContainer" unique_id=442757299]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "Aleatorizar"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Limpar" type="Button" parent="VBoxContainer" unique_id=1523601583]
+layout_mode = 2
+text = "Limpar
+"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=2063420728]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ContainerTarefas" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=849068140]
+layout_mode = 2
+
+[node name="Modulo_Tarefa" parent="VBoxContainer/ScrollContainer/ContainerTarefas" unique_id=1841681120 instance=ExtResource("2_3dhci")]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer" unique_id=1771617152]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=539359886]
+layout_mode = 2
+columns = 2
+
+[node name="EntradaDeTexto" parent="VBoxContainer/GridContainer" unique_id=2136357412 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+nome_exibir = "Momento de entrada"
+
+[node name="EntradaDeTexto2" parent="VBoxContainer/GridContainer" unique_id=473391537 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+nome_exibir = "Prioridade"
+
+[node name="EntradaDeTexto3" parent="VBoxContainer/GridContainer" unique_id=1382848723 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+nome_exibir = "Tempo de processo"
+
+[node name="EntradaDeTexto4" parent="VBoxContainer/GridContainer" unique_id=1540911365 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+nome_exibir = "Tempo de pedida de recurso"
+
+[node name="EntradaDeTexto5" parent="VBoxContainer/GridContainer" unique_id=1615206760 instance=ExtResource("2_4ks2n")]
+layout_mode = 2
+nome_exibir = "Duração uso de recurso"
+
+[node name="Adicionar" type="Button" parent="VBoxContainer/GridContainer" unique_id=637347312]
+layout_mode = 2
+text = "Adicionar"

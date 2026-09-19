@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://boaf0n58pbenf"]
+
+[ext_resource type="Script" uid="uid://dqfv75tencoj8" path="res://scenes/scripts/tela_principal_script.gd" id="1_1hf83"]
+[ext_resource type="Theme" uid="uid://d1s1q82tcjakv" path="res://resources/modern_sleek_theme.tres" id="1_aharh"]
+[ext_resource type="PackedScene" uid="uid://dipvg4biirhx2" path="res://elements/Lista de processos/tabela_de_processos.tscn" id="1_cp88f"]
+[ext_resource type="PackedScene" uid="uid://xssde8s3ufd7" path="res://elements/grafico/Elemento_Grafico.tscn" id="2_uj1tx"]
+[ext_resource type="PackedScene" uid="uid://cbeoackr1isv8" path="res://elements/grafico/Elemento_multiplo_graficos.tscn" id="3_aharh"]
+[ext_resource type="Script" uid="uid://mav3g8atw1uy" path="res://scenes/scripts/log_script.gd" id="4_542gw"]
+[ext_resource type="Shader" uid="uid://bcj00oqio6r5j" path="res://elements/scripts/shader/crtvhs_screen_shader.gdshader" id="5_unrso"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_aharh"]
+allow_unpress = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cl8i"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3kyr6"]
+shader = ExtResource("5_unrso")
+shader_parameter/brightness = 1.28400006099
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.0110000005225
+shader_parameter/corner_soften = 0.0
+shader_parameter/vignette = 0.38
+shader_parameter/scanline_strength = 0.0
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 0.17600000836
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 0.0
+shader_parameter/wobble_px = 0.2290000108775
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.0
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.0
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
+
+[node name="TelaPrincipal" type="Control" unique_id=654338606 node_paths=PackedStringArray("buttao_iniciar_processo", "processos_tab", "grafico_tab", "multigrafico_tab")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_aharh")
+script = ExtResource("1_1hf83")
+buttao_iniciar_processo = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Button")
+processos_tab = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TabContainer/TabelaDeProcessos")
+grafico_tab = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TabContainer/Tabela Unica")
+multigrafico_tab = NodePath("PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TabContainer/Multiplas Tabelas")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=487345641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1893354806]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=777882260]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=413650807]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=95294422]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/normal_font_size = 32
+text = "Simulador De  Escalonador
+"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1464144180]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FoldableContainer" type="FoldableContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1759745322]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+folded = true
+title_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=850972978]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1241121796]
+layout_mode = 2
+size_flags_vertical = 0
+current_tab = 0
+
+[node name="Tabela Unica" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TabContainer" unique_id=1884272854 node_paths=PackedStringArray("painel_log") instance=ExtResource("2_uj1tx")]
+layout_mode = 2
+size_flags_vertical = 3
+painel_log = NodePath("../../../TabContainer/Historico")
+metadata/_tab_index = 0
+
+[node name="Multiplas Tabelas" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TabContainer" unique_id=1394329030 node_paths=PackedStringArray("painel_log") instance=ExtResource("3_aharh")]
+visible = false
+layout_mode = 2
+painel_log = NodePath("../../../TabContainer/Historico")
+metadata/_tab_index = 1
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1280315548]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_aharh")
+text = "Iniciar"
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=363845014]
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+use_hidden_tabs_for_min_size = true
+
+[node name="Historico" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TabContainer" unique_id=697877090 node_paths=PackedStringArray("text")]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cl8i")
+script = ExtResource("4_542gw")
+text = NodePath("MarginContainer/RichTextLabel")
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TabContainer/Historico" unique_id=1432883270]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TabContainer/Historico/MarginContainer" unique_id=1468768255]
+layout_mode = 2
+
+[node name="TabelaDeProcessos" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TabContainer" unique_id=642124861 instance=ExtResource("1_cp88f")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=333841271]
+material = SubResource("ShaderMaterial_3kyr6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

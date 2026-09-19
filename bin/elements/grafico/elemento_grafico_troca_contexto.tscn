@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bgcq61vdulutl"]
+
+[ext_resource type="Script" uid="uid://dgq0x5rfxrdj3" path="res://elements/grafico/elemento_grafico_troca_script.gd" id="1_p843s"]
+[ext_resource type="PackedScene" uid="uid://dribrqdbjfmvt" path="res://elements/grafico/step_tarefa_ativa.tscn" id="2_q0rc1"]
+[ext_resource type="PackedScene" uid="uid://cftk5a8e3cvg0" path="res://elements/grafico/step_tarefa.tscn" id="3_qpi28"]
+[ext_resource type="PackedScene" uid="uid://b4m65qjhnkrg3" path="res://elements/grafico/step_vazio.tscn" id="4_5xfhp"]
+[ext_resource type="PackedScene" uid="uid://bp745kn77fgqt" path="res://elements/grafico/step_suspenso.tscn" id="5_q0rc1"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=1724675353]
+script = ExtResource("1_p843s")
+elemento_tarefa_ativa = ExtResource("2_q0rc1")
+elemento_tarefa = ExtResource("3_qpi28")
+elemento_vazio = ExtResource("4_5xfhp")
+elemento_suspenso = ExtResource("5_q0rc1")

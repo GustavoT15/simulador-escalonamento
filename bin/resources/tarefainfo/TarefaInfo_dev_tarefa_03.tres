@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TarefaInfo" format=3 uid="uid://fucexrxaqhus"]
+
+[ext_resource type="Script" uid="uid://c2tnt1hwd72io" path="res://script/resource_processo_info_script.gd" id="1_kii60"]
+
+[resource]
+script = ExtResource("1_kii60")
+metadata/_custom_type_script = "uid://c2tnt1hwd72io"

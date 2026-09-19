@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://de4mmclqqnexp"]
+
+[ext_resource type="Script" uid="uid://c5ws4xn426ec4" path="res://elements/scripts/elemento_grafico_script.gd" id="1_w0jtk"]
+[ext_resource type="Script" uid="uid://c2tnt1hwd72io" path="res://script/resource_processo_info_script.gd" id="2_v37ov"]
+[ext_resource type="Resource" uid="uid://fucexrxaqhus" path="res://resources/tarefainfo/TarefaInfo_dev_tarefa_03.tres" id="3_5ew02"]
+[ext_resource type="Resource" uid="uid://dbjl7qawpi3jd" path="res://resources/tarefainfo/TarefaInfo_dev_tarefa_02.tres" id="4_1muv7"]
+[ext_resource type="Resource" uid="uid://dd26cgi6kj760" path="res://resources/tarefainfo/TarefaInfo_dev_tarefa_01.tres" id="5_6fym8"]
+[ext_resource type="PackedScene" uid="uid://0ons1hbuxowf" path="res://elements/grafico/elemento_grafico_tupla.tscn" id="6_2x12i"]
+[ext_resource type="PackedScene" uid="uid://d0tn1uqvmtcu1" path="res://elements/grafico/elemento_grafico_counter.tscn" id="7_ne5g7"]
+[ext_resource type="PackedScene" uid="uid://bgcq61vdulutl" path="res://elements/grafico/elemento_grafico_troca_contexto.tscn" id="8_8yltg"]
+[ext_resource type="PackedScene" uid="uid://b4m65qjhnkrg3" path="res://elements/grafico/step_vazio.tscn" id="9_aq3eo"]
+[ext_resource type="Texture2D" uid="uid://bomp77j6wgyfd" path="res://assets/textures/down.png" id="10_84jyt"]
+[ext_resource type="PackedScene" uid="uid://crrpthibrtsfb" path="res://elements/Elemento_Entrada_Texto.tscn" id="11_1ptpx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cl8i"]
+bg_color = Color(0, 0, 0, 0.19607843)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="PanelContainer2" type="PanelContainer" unique_id=1884272854 node_paths=PackedStringArray("label_display", "container", "dropdown", "entrada_quantum", "entrada_custo_de_troca", "entrada_envelhecimento", "entrada_delay", "butao_heranca_p", "butao_teto_p")]
+offset_right = 435.0
+offset_bottom = 281.0
+script = ExtResource("1_w0jtk")
+tarefas = Array[ExtResource("2_v37ov")]([ExtResource("3_5ew02"), ExtResource("4_1muv7"), ExtResource("5_6fym8")])
+cena = ExtResource("6_2x12i")
+counter = ExtResource("7_ne5g7")
+troca = ExtResource("8_8yltg")
+label_display = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/RichTextLabel")
+container = NodePath("VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer/ScrollContainer/VBoxContainer")
+elemento_tarefa_id = ExtResource("9_aq3eo")
+dropdown = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/MenuButton")
+entrada_quantum = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Campo Tempo de Quantum")
+entrada_custo_de_troca = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Campo Custo Troca")
+entrada_envelhecimento = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Taxa de Envelhecimento")
+entrada_delay = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Campo delay")
+butao_heranca_p = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Button")
+butao_teto_p = NodePath("VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer/Button2")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=500410816]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer2" unique_id=124505342]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cl8i")
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="VBoxContainer2/PanelContainer" unique_id=1200995244]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+horizontal_scroll_mode = 0
+scroll_hint_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/PanelContainer/ScrollContainer2" unique_id=1795259924]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="uid_container" type="VBoxContainer" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer" unique_id=557451125]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer" unique_id=977613689]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+vertical_scroll_mode = 0
+scroll_hint_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer/ScrollContainer" unique_id=1604675323]
+layout_mode = 2
+
+[node name="HBoxContainer" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer/ScrollContainer/VBoxContainer" unique_id=1724675353 instance=ExtResource("6_2x12i")]
+layout_mode = 2
+
+[node name="HBoxContainer2" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer/ScrollContainer/VBoxContainer" unique_id=339623514 instance=ExtResource("6_2x12i")]
+layout_mode = 2
+
+[node name="HBoxContainer3" parent="VBoxContainer2/PanelContainer/ScrollContainer2/HBoxContainer/ScrollContainer/VBoxContainer" unique_id=370520455 instance=ExtResource("6_2x12i")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1695287544]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer" unique_id=987125131]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=153842789]
+layout_mode = 2
+text = "Tick Atual"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MenuButton" type="MenuButton" parent="VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=1211958493]
+layout_mode = 2
+text = "Tipo"
+icon = ExtResource("10_84jyt")
+alignment = 0
+expand_icon = true
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=1330662700]
+layout_mode = 2
+
+[node name="Campo Custo Troca" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=441406 instance=ExtResource("11_1ptpx")]
+layout_mode = 2
+valor_inicial = 1.0
+nome_exibir = "Custo de troca de contexto"
+
+[node name="Campo delay" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=1225282258 instance=ExtResource("11_1ptpx")]
+layout_mode = 2
+valor_inicial = 0.25
+is_int = false
+nome_exibir = "Tempo de Tick"
+
+[node name="Campo Tempo de Quantum" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=290634407 instance=ExtResource("11_1ptpx")]
+layout_mode = 2
+valor_inicial = 1.0
+nome_exibir = "Tempo de quantum"
+
+[node name="Taxa de Envelhecimento" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=187052718 instance=ExtResource("11_1ptpx")]
+layout_mode = 2
+valor_inicial = 1.0
+nome_exibir = "Taxa de envelhecimento"
+
+[node name="Button" type="Button" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=1764874181]
+layout_mode = 2
+text = "Herança"
+
+[node name="Button2" type="Button" parent="VBoxContainer2/HBoxContainer/VBoxContainer/GridContainer" unique_id=1080014459]
+layout_mode = 2
+text = "Teto
+"
