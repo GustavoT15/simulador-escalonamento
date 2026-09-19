@@ -108,7 +108,7 @@ simulador_escalonamento/
 
 ## Recursos adicionais
 
-- [Tutorial de uso](./docs/tutorial_uso.pdf)
+- [Tutorial de uso](./documentos/Tutorial_de_Uso_Simulador_Escalonamento.pdf)
 - [Documentação técnica](./documentos/documentacao_tecnica_escalonador.pdf)
 - [Projeto e código-fonte](./bin/project.godot)
 
