@@ -125,7 +125,6 @@ finalizados — ver `docs/documentacao_projeto.pdf` para o detalhamento técnico
 
 ## Documentação
 
-- [Tutorial de execução](./docs/tutorial_execucao.pdf)
 - [Tutorial de uso](./docs/tutorial_uso.pdf)
 - [Documentação técnica](./documentos/documentacao_tecnica_escalonador.pdf)
 
