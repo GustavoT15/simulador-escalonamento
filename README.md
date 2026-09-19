@@ -106,10 +106,11 @@ simulador_escalonamento/
 - Sistema operacional: Windows x64.
 
 
-## Documentação
+## Recursos adicionais
 
 - [Tutorial de uso](./docs/tutorial_uso.pdf)
 - [Documentação técnica](./documentos/documentacao_tecnica_escalonador.pdf)
+- [Projeto e código-fonte](./bin/project.godot)
 
 ## Por onde começar
 
