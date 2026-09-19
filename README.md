@@ -28,7 +28,7 @@ executa os seis algoritmos simultaneamente sobre o mesmo conjunto de tarefas.
 
 ## Como executar
 
-- Extraia o conteúdo de exe/SimuladorDeEscalonador.7z e execute
+- Extraia o conteúdo de exe/simulador_de_escalonador.7z e execute
   `SimuladorDeEscalonador.exe` ou
 - Instale o [Godot Engine](https://godotengine.org/)
   (versão 4.4 ou superior), abra
