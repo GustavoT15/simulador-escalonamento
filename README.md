@@ -7,10 +7,10 @@ Implementado em **Godot Engine** (GDScript).
 
 ## Autoria
 
-- Gustavo Trindade Rodrigues
-- Lucas Barboza Silva
-- Matheus Henrique Gonçalves Nunes
-- Victor Oliveira Malvão
+- Gustavo Trindade Rodrigues (081230033)
+- Lucas Barboza Silva (081230009)
+- Matheus Henrique Gonçalves Nunes (081230030)
+- Victor Oliveira Malvão (081230020)
 
 ## Descrição
 
