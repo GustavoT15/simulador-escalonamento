@@ -28,8 +28,8 @@ executa os seis algoritmos simultaneamente sobre o mesmo conjunto de tarefas.
 
 ## Como executar
 
-- Cique duas vezes em
-  `<NomeDoExecutavel>.exe` ou
+- Extraia o conteúdo de exe/SimuladorDeEscalonador.7z e execute
+  `SimuladorDeEscalonador.exe` ou
 - Instale o [Godot Engine](https://godotengine.org/)
   (versão 4.4 ou superior), abra
   o projeto pela raiz do repositório e pressione **Play** (F5), tendo
@@ -103,7 +103,7 @@ simulador_escalonamento/
 
 - **Godot Engine 4.4 ou superior** caso seja utilizado o código-fonte.
 - Apenas classes nativas do motor.
-- Sistema operacional: <preencher, conforme a(s) plataforma(s) de exportação usada(s)>.
+- Sistema operacional: Windows x64.
 
 ## Funcionalidades
 
@@ -127,7 +127,7 @@ finalizados — ver `docs/documentacao_projeto.pdf` para o detalhamento técnico
 
 - [Tutorial de execução](./docs/tutorial_execucao.pdf)
 - [Tutorial de uso](./docs/tutorial_uso.pdf)
-- [Documentação técnica](./docs/documentacao_projeto.pdf)
+- [Documentação técnica](./documentos/documentacao_tecnica_escalonador.pdf)
 
 ## Por onde começar
 
