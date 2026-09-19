@@ -80,7 +80,7 @@ simulador_escalonamento/
     `-- textures/                          Imagens da interface
 ```
 
-## Arquivos de código
+## Arquivos de código e suas funcionalidades
 
 | Arquivo | O que faz |
 |---|---|
@@ -105,23 +105,6 @@ simulador_escalonamento/
 - Apenas classes nativas do motor.
 - Sistema operacional: Windows x64.
 
-## Funcionalidades
-
-| O que faz | Onde |
-|---|---|
-| Algoritmos FCFS, SJF, SRTF e Round-Robin | `elements/scripts/elemento_grafico_script.gd` |
-| Prioridade Cooperativa (não preemptiva) | `elements/scripts/elemento_grafico_script.gd` |
-| Prioridade Preemptiva* | `elements/scripts/elemento_grafico_script.gd` |
-| Diagrama de tempo (raias de execução, espera e suspensão) | `elements/scripts/elemento_grafico_tupla_script.gd`, `elements/grafico/elemento_grafico_troca_script.gd`, `elements/grafico/elemento_grafico_counter_script.gd` |
-| Recurso de uso exclusivo (R) e suspensão de tarefas | `elements/scripts/elemento_grafico_script.gd` |
-| Cadastro manual ou aleatório de tarefas, com salvar/carregar cenário | `elements/Lista de processos/scripts/tabela_de_processos_script.gd` |
-| Comparação simultânea dos seis escalonadores | `elements/grafico/elemento_multiplo_graficos_script.gd` |
-| Tabela de métricas por tarefa* | `elements/grafico/tabela_resultados_script.gd` |
-| Log textual dos eventos da simulação | `scenes/scripts/log_script.gd` |
-
-\* No estado atual do código-fonte, a Prioridade Preemptiva (com herança e teto de
-prioridade) e o preenchimento automático da tabela de métricas ainda não estão
-finalizados — ver `docs/documentacao_projeto.pdf` para o detalhamento técnico.
 
 ## Documentação
 
