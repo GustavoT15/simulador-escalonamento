@@ -15,8 +15,8 @@ Implementado em **Godot Engine** (GDScript).
 ## Descrição
 
 Simulador do funcionamento de um escalonador de tarefas em um único processador.
-A partir de um conjunto de tarefas definido pelo usuário — cada uma com instante
-de ingresso, tempo de processamento e prioridade —, o programa executa, tick a
+A partir de um conjunto de tarefas definido pelo usuário (cada uma com instante
+de ingresso, tempo de processamento e prioridade), o programa executa, tick a
 tick, um dos seis algoritmos de escalonamento: FCFS, SJF, SRTF, Round-Robin,
 Prioridade Cooperativa e Prioridade Preemptiva. O resultado é apresentado como
 um diagrama de tempo, mostrando execução, espera, suspensão e conclusão de cada
